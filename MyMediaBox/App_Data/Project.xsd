@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AllProjects" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="AllProjects" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Proj">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProjectID" type="xs:string" minOccurs="0" />
+              <xs:element name="ProjectNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="AllSubmissions" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Sub" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SubmissionID" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+                          <xs:element name="SubmissionNumber" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                        </xs:sequence>
+                        <xs:attribute name="Type" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
